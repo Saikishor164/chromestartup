@@ -23,6 +23,29 @@
       padding-bottom: 20px;
     }
 
+    #search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #search-input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      width: 70%;
+    }
+
+    #search-icon {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px;
+      border: 1px solid #007bff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
     #links {
       display: flex;
       flex-wrap: wrap;
@@ -58,6 +81,10 @@
     <div id="header">
       <h1>Real-Time Developers Start Page</h1>
     </div>
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Search on Google">
+      <div id="search-icon">&#128269;</div>
+    </div>
     <div id="links">
       <div class="link-item">
         <a href="https://www.google.com" target="_blank">Google Search</a>
@@ -79,5 +106,23 @@
       </div>
     </div>
   </div>
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const searchIcon = document.getElementById('search-icon');
+
+    searchIcon.addEventListener('click', () => {
+      const query = searchInput.value.trim();
+      if (query) {
+        const encodedQuery = encodeURIComponent(query);
+        window.open(`https://www.google.com/search?q=${encodedQuery}`, '_blank');
+      }
+    });
+
+    searchInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        searchIcon.click();
+      }
+    });
+  </script>
 </body>
 </html>
