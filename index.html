@@ -5,17 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real-Time Developers Start Page</title>
   <style>
+    
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background: url("C:\Users\Azam I.T\Downloads\pexels-saikishor-rasala-6233865 (1).jpg") fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
       margin: 0;
       padding: 0;
     }
 
+    #blur-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      filter: blur(5px);
+      opacity: 0.5;
+    }
     #container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     #header {
@@ -77,6 +93,8 @@
   </style>
 </head>
 <body>
+    <div id="blur-background">
+
   <div id="container">
     <div id="header">
       <h1>Saikishor's page for AZAM I.T. Work</h1>
@@ -107,6 +125,7 @@
         <a href="YOUR_LINK_HERE" target="_blank">Link 6</a>
       </div>
     </div>
+  </div>
   </div>
   <script>
     const searchInput = document.getElementById('search-input');
