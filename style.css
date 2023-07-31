@@ -9,7 +9,7 @@
         padding: 0;
       }
       #top-image {
-        background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
+        background:url('./red-rocks-park-o.jpg') -25px -50px;
         position:fixed ;
         top:0;
         width:100%;
