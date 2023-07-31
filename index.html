@@ -3,122 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" >
   <title>Real-Time Developers Start Page</title>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-      background: url("./pexels-saikishor-rasala-6233865.jpg");
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      margin: 0;
-      padding: 0;
-    }
 
-    #blur-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: inherit;
-      filter: blur(5px);
-      opacity: 0.5;
-    }
-    #container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    #header {
-      text-align: center;
-      padding-bottom: 20px;
-    }
-
-    #search-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    #search-input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px 0 0 5px;
-      width: 70%;
-    }
-
-    #search-icon {
-      background-color: #007bff;
-      color: #fff;
-      padding: 8px;
-      border: 1px solid #007bff;
-      border-radius: 0 5px 5px 0;
-      cursor: pointer;
-    }
-
-    #links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .link-item {
-      width: 32%;
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .link-item a {
-      color: #333;
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      transition: background-color 0.2s ease;
-    }
-
-    .link-item a:hover {
-      background-color: #f2f2f2;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 40px;
-      font-weight: bold;
-      color: #000000;
-      background: linear-gradient(45deg, #d2cac6, #2ECC71);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: glow 1s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      0% {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #2ECC71, 0 0 30px #ffffff;
-      }
-      50% {
-        text-shadow: 0 0 20px #ffffff, 0 0 40px #2ECC71, 0 0 60px #ffffff;
-      }
-      100% {
-        text-shadow: 0 0 30px #ffffff, 0 0 80px #2ECC71, 0 0 90px #ffffff;
-      }
-    }
     
   </style>
 </head>
-<body>
-    <div id="blur-background"></div>
+<body id="body">
+    <div id="top-image"></div>
+
 
   <div id="container">
     <div id="header"><br><br><br>
@@ -132,16 +28,16 @@
     <br><br> <br><br><br><br>
     <div id="links">
       <div class="link-item">
-        <a href="https://www.google.com" target="_blank">Google Search</a>
+        <a href="https://saikishor164.github.io" target="_blank">my Site</a>
       </div>
       <div class="link-item">
-        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://github.com/saikishor164" target="_blank">GitHub</a>
       </div>
       <div class="link-item">
-        <a href="https://leetcode.com" target="_blank">LeetCode</a>
+        <a href="https://leetcode.com/saikishor164" target="_blank">LeetCode</a>
       </div>
       <div class="link-item">
-        <a href="YOUR_LINK_HERE" target="_blank">Link 4</a>
+        <a href="https://linktr.ee/saikishor164" target="_blank">linktree</a>
       </div>
       <div class="link-item">
         <a href="YOUR_LINK_HERE" target="_blank">Link 5</a>
@@ -153,22 +49,7 @@
   </div>
 
   <script>
-    const searchInput = document.getElementById('search-input');
-    const searchIcon = document.getElementById('search-icon');
-
-    searchIcon.addEventListener('click', () => {
-      const query = searchInput.value.trim();
-      if (query) {
-        const encodedQuery = encodeURIComponent(query);
-        window.open(`https://www.google.com/search?q=${encodedQuery}`, '_blank');
-      }
-    });
-
-    searchInput.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        searchIcon.click();
-      }
-    });
+    
   </script>
 </body>
 </html>
